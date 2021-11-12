@@ -1,6 +1,6 @@
 import { levelDescriptions } from "./levels"
 
-
+// Represents a single tube
 export class Tube {
     bubbles: number[]
     maxBubbles: number
@@ -38,6 +38,8 @@ export class Tube {
     }
 }
 
+// Current game state
+// activeTube = tube clicked, bubble lifted up for moving (-1, no tube active)
 export class GameState {
     level: Level
     activeTube: number = -1
@@ -51,12 +53,12 @@ export class GameState {
         }
     }
 
-    isWon() {
+    isSolved() {
         return this.tubes.every((tube) => tube.isEmpty() || tube.isSolved())
     }
-
 }
 
+// Single level loaded from level description
 export class Level {
     initialState: number[][] = []
     nTubes: number
@@ -85,6 +87,7 @@ export class Level {
     }
 }
 
+// Load all levels from descrtiptions to Level objects
 export function loadLevels() {
     let levels: Level[] = []
 
