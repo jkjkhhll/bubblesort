@@ -1,0 +1,21 @@
+{
+  "name": "bubblesort",
+  "version": "1.0.0",
+  "description": "Simple Bubble Sort Game",
+  "scripts": {
+    "dev": "parcel src/index.html",
+    "build": "parcel build src/index.html",
+    "deploy": "surge ./dist/ --domain complex-nest.surge.sh"
+  },
+  "author": "Antti Lampinen",
+  "license": "ISC",
+  "devDependencies": {
+    "cssnano": "^5.0.10",
+    "postcss": "^8.3.11",
+    "typescript": "^4.4.4"
+  },
+  "dependencies": {
+    "images": "^3.2.3",
+    "pixi.js": "^6.2.0"
+  }
+}
